@@ -1,0 +1,20 @@
+Documento de Cierre — Día 1
+
+Nombre del Estudiante: Jonel Ascoitia
+
+Preguntas de Cierre:
+
+1. ¿Qué diferencia hay entre ejecutar JavaScript en el navegador y ejecutarlo con Node.js? Menciona al menos dos diferencias concretas.
+   R: En el navegador usas el DOM (window, document) para la parte visual, pero en Node eso no existe y usas herramientas para el servidor como leer archivos. Además, Node nos deja correr JS fuera de una pestaña de Chrome usando el motor V8.
+
+2. ¿Para qué sirve package.json? ¿Qué información tiene que no tenía tu proyecto del Sprint 0?
+   R: Es como la ficha técnica del proyecto. Ahí guardamos los scripts de inicio y la lista de librerías. En el Sprint 0 no lo usábamos, solo teníamos archivos JS sueltos sin configuración de scripts.
+
+3. ¿Por qué node_modules no se sube a GitHub? ¿Cómo hace otra persona para recuperar esas dependencias?
+   R: Porque pesa muchísimo y no tiene sentido subir miles de archivos. Para recuperarlos, alguien más solo tiene que bajar el proyecto y correr 'npm install' para que se instalen solos.
+
+4. ¿Qué hace nodemon exactamente? ¿Por qué se instala con --save-dev y no como dependencia normal?
+   R: Reinicia el servidor automáticamente cada vez que guardas un cambio en el código. Lo instalamos en dev porque solo lo necesitamos mientras programamos, no hace falta cuando la app ya esté funcionando para el cliente.
+
+Reflexión Personal:
+Me gustó mucho ver que con un comando como 'npm run dev' todo se vuelve más fácil y no tengo que estar cerrando y abriendo la terminal a cada rato. Entender el package.json me ayudó a ver el proyecto más organizado.

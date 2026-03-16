@@ -1,0 +1,22 @@
+Evaluación de Pares - Día 1
+
+Estudiante A: Jonel
+Estudiante B: Esteban
+
+Criterios a evaluar:
+
+1. ¿El compañero entendió qué es Node.js y el motor V8?
+   - Jonel sobre Esteban: Sí, entendió que el V8 es el motor de Chrome que ahora usamos en el servidor.
+   - Esteban sobre Jonel: Sí, Jonel me explicó bien por qué Node no usa el DOM.
+
+2. ¿Lograron inicializar el proyecto con npm init y entender el package.json?
+   - Comentario: Todo bien aquí, creamos el archivo rápido y vimos cómo se guardan los scripts.
+
+3. ¿Comprendieron la importancia de node_modules y por qué se usa .gitignore?
+   - Comentario: Sí, ya sabemos que no hay que subir esa carpeta porque pesa mucho.
+
+4. ¿Configuraron correctamente nodemon y los scripts start y dev?
+   - Comentario: Sí, ya funcionan los dos scripts. Nodemon es lo mejor del día.
+
+Observaciones:
+La clase estuvo buena, instalamos todo sin problemas y ya tenemos la base para lo que viene.

@@ -1,0 +1,14 @@
+Documento de Cierre — Día 1
+
+Nombre del Estudiante: Esteban
+
+1. R: El navegador es para lo visual (DOM) y Node es para usar JS en la compu directamente (procesos y archivos) con el motor V8.
+
+2. R: Sirve para configurar el proyecto y guardar los scripts. Antes no teníamos este control de dependencias.
+
+3. R: Pesa demasiado para subirlo. Para recuperarlo solo usas 'npm install'.
+
+4. R: Reinicia la app automáticamente al detectar cambios. Es --save-dev porque solo sirve para programar, no para producción.
+
+Reflexión:
+Lo mejor fue ver cómo nodemon detectó el cambio cuando agregué el ceviche sin tener que reiniciar yo solo.
