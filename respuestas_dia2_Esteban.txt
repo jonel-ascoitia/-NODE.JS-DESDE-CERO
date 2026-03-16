@@ -1,0 +1,14 @@
+DOCUMENTO DE CIERRE - DÍA 2
+ESTUDIANTE: Esteban
+
+1. ¿Qué hace http.createServer()? ¿Qué son req y res?
+Crea el receptor de pedidos. 'req' es la solicitud del cliente y 'res' es la respuesta o comida servida.
+
+2. ¿Por qué el body del POST no se puede leer directamente como los query params?
+Porque es una transmisión de datos independiente que llega por partes para no saturar la memoria.
+
+3. ¿Qué cambió y qué sigue igual respecto al Sprint 0?
+La lógica de manejo de datos es la misma, pero ahora se activa mediante una URL y métodos HTTP.
+
+4. ¿Cómo se maneja si falta el campo 'nombre' en un POST?
+Se detecta la información incompleta y el servidor responde con un código 400 para evitar datos nulos.

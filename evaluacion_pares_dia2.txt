@@ -1,0 +1,17 @@
+TARJETA DE EVALUACIÓN - DÍA 2
+
+EVALUADOR: Jonel
+EVALUADO: Esteban
+ESCENARIO ELEGIDO: Concepto de Body en POST (Chunks)
+RESUMEN DE LA RESPUESTA: Esteban explicó que Node.js maneja las peticiones como streams. El body puede ser muy grande, por lo que se envía en 'chunks' (pedazos) para no bloquear la memoria. Se necesita el evento 'data' para acumularlos y 'end' para saber que ya terminó.
+QUÉ ENTENDIÓ BIEN: Entendió perfectamente la diferencia entre flujo de datos y datos completos.
+QUÉ NECESITA REPASAR: Recordar siempre convertir el buffer a string antes de parsear el JSON.
+
+----------------------------------
+
+EVALUADOR: Esteban
+EVALUADO: Jonel
+ESCENARIO ELEGIDO: Códigos de estado 200 vs 201
+RESUMEN DE LA RESPUESTA: Jonel explicó que 200 es para peticiones exitosas generales (como GET) y 201 es específico para cuando se ha "Creado" un recurso nuevo, como al agregar un plato con POST.
+QUÉ ENTENDIÓ BIEN: La semántica de los códigos HTTP para diferentes tipos de éxito.
+QUÉ NECESITA REPASAR: Asegurarse de enviar el 201 antes de cerrar la respuesta con res.end().

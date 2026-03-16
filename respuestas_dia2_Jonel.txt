@@ -1,0 +1,14 @@
+DOCUMENTO DE CIERRE - DÍA 2
+ESTUDIANTE: Jonel
+
+1. ¿Qué hace http.createServer()? ¿Qué son req y res?
+Es la "cocina" esperando pedidos. 'req' es el pedido del cliente y 'res' es el plato entregado.
+
+2. ¿Por qué el body del POST no se puede leer directamente como los query params?
+Porque es contenido del paquete, no parte de la dirección. Se recibe en partes (streams) por eficiencia.
+
+3. ¿Qué cambió y qué sigue igual respecto al Sprint 0?
+La lógica de búsqueda es idéntica (.find); cambió el medio (HTTP) y el formato de entrega (JSON).
+
+4. ¿Cómo se maneja si falta el campo 'nombre' en un POST?
+El servidor valida los campos obligatorios y devuelve un error 400 (Bad Request).
