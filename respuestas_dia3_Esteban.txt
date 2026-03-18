@@ -1,0 +1,13 @@
+Respuestas Día 3 — Esteban
+
+1. En el Sprint 0 tenías operaciones.js con funciones como buscarPlatoPorNombre() y agregarPlato(). ¿Qué archivo de hoy es el equivalente de operaciones.js? ¿Qué cambió y qué sigue igual?
+   El archivo equivalente es controllers/menu.controller.js. La lógica del menú es la misma, pero ahora son controladores adaptados a HTTP.
+
+2. ¿Qué hace app.use(express.json())? ¿Qué pasaría si lo quitas y haces un POST con datos?
+   Parsea automáticamente el body JSON de las peticiones a req.body. Si lo quitas, req.body llegaría como undefined.
+
+3. Explica la diferencia entre un parámetro de ruta (:id) y un query param (?nombre=). ¿Cuándo usarías cada uno en el restaurante?
+   El :id identifica un recurso específico; el query param busca o filtra un conjunto. Usaría :id para actualizar o borrar un plato y query params para búsquedas generales.
+
+4. ¿Qué es next() en un middleware? ¿Qué pasa si un middleware no lo llama?
+   Es lo que permite que el flujo de la petición continúe. Sin next(), la petición se bloquea y nunca llega al siguiente middleware o controlador.

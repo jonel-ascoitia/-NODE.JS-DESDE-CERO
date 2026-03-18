@@ -1,0 +1,15 @@
+EVALUADOR: Esteban
+EVALUADO: Jonel
+ESCENARIO ELEGIDO: 1
+RESUMEN DE LA RESPUESTA: Jonel explicó que Express usa el middleware express.json() para parsear el cuerpo de las peticiones POST automáticamente, convirtiendo lo que antes eran múltiples líneas de eventos data/end en una sola propiedad req.body.
+QUÉ ENTENDIÓ BIEN: El funcionamiento del middleware express.json() y cómo simplifica el manejo de datos.
+QUÉ NECESITA REPASAR: La diferencia interna entre cómo Node nativo y Express manejan los flujos de datos.
+
+------------------------------------------------------------------
+
+EVALUADOR: Jonel
+EVALUADO: Esteban
+ESCENARIO ELEGIDO: 2
+RESUMEN DE LA RESPUESTA: Esteban señaló que los middlewares se ejecutan en orden secuencial. Si el primero (verificarDatosPlato) no llama a next(), la petición se detiene y el controlador (agregarPlato) nunca se ejecuta.
+QUÉ ENTENDIÓ BIEN: El flujo de control mediante la función next().
+QUÉ NECESITA REPASAR: Los códigos de estado HTTP que se deben devolver cuando se detiene una petición.
