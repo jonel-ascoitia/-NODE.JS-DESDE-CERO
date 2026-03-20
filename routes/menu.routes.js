@@ -21,8 +21,8 @@ const verificarDatosPlato = (req, res, next) => {
 // GET /menu
 router.get('/', menuController.obtenerMenu);
  
-// GET /menu/buscar?nombre=xxx
-router.get('/buscar', menuController.buscarPlato);
+// GET /menu/:id
+router.get('/:id', menuController.buscarPlato);
  
 // POST /menu
 router.post('/', verificarDatosPlato, menuController.agregarPlato);

@@ -2,6 +2,7 @@
 const express = require('express');
 const menuRouter = require('./routes/menu.routes');
 const logger = require('./middlewares/logger');
+const conectarDB = require('./database/connection');
  
 const app = express();
 const PORT = 3000;
@@ -9,6 +10,9 @@ const PORT = 3000;
 app.use(express.json());
 app.use(logger); // ← se ejecuta en TODAS las peticiones
  
+// Conectar a MongoDB antes de levantar el servidor
+conectarDB();
+
 // Conectar el router del menú
 app.use('/menu', menuRouter);
  

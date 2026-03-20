@@ -1,0 +1,6 @@
+EVALUADOR: Esteban
+EVALUADO: Jonel
+ESCENARIO ELEGIDO: Escenario 1 - Lógica del menú movida al Service.
+RESUMEN DE LA RESPUESTA: Jonel explicó que ahora el controlador solo recibe la petición y llama al `platoService.crear()`. La lógica de interactuar con MongoDB vive en el service para que el código sea más ordenado y fácil de testear. Mostró el archivo `services/plato.service.js` donde está el método `save()`.
+QUÉ ENTENDIÓ BIEN: Entendió perfectamente la separación de responsabilidades entre el controlador y el service.
+QUÉ NECESITA REPASAR: Recordar por qué usamos `async/await` en todas las llamadas a la base de datos (operaciones asíncronas).

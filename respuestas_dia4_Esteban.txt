@@ -1,0 +1,11 @@
+1. ¿Qué problema resuelve MongoDB que el array en memoria no podía resolver? Usa un ejemplo concreto del restaurante.
+Respuesta: Soluciona el problema de la pérdida de datos. Antes, al usar un array, los platos se borraban al reiniciar el servidor. Con MongoDB, la información del menú se guarda en el disco de forma permanente.
+
+2. Explica el flujo completo de un POST /menu: desde que el cliente envía la petición hasta que el dato queda guardado en MongoDB. Menciona cada archivo que participa.
+Respuesta: Petición -> app.js -> router -> controlador -> platoService -> modelo (Mongoose) -> DB. Cada capa procesa o valida el dato antes de llegar a la base de datos.
+
+3. ¿Para qué sirve { new: true } en findByIdAndUpdate? ¿Qué pasaría en el cliente si no lo pusieras?
+Respuesta: Se usa para obtener el objeto ya modificado. Si no se incluye, veríamos los datos antiguos en el JSON de respuesta, lo que podría confundir al usuario.
+
+4. ¿Qué es un Schema de Mongoose y qué ventaja tiene sobre guardar cualquier objeto directamente en MongoDB?
+Respuesta: Es una estructura definida para los documentos. La ventaja es que obliga a que los datos sigan un formato (nombres, números) evitando errores o datos incompletos.
