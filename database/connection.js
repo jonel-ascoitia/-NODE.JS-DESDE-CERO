@@ -1,13 +1,15 @@
 const mongoose = require('mongoose');
- 
+const { mongoUri } = require('../config');
+
 const conectarDB = async () => {
     try {
-        await mongoose.connect('mongodb://localhost:27017/restaurante');
+        await mongoose.connect(mongoUri);
         console.log('MongoDB conectado — restaurante');
     } catch (error) {
         console.error('Error de conexión:', error.message);
         process.exit(1);
     }
 };
- 
+
 module.exports = conectarDB;
+

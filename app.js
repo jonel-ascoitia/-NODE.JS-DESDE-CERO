@@ -4,9 +4,11 @@ const menuRouter = require('./routes/menu.routes');
 const authRouter = require('./routes/auth.routes');
 const logger = require('./middlewares/logger');
 const conectarDB = require('./database/connection');
+const { port } = require('./config');
+
  
 const app = express();
-const PORT = 3000;
+
  
 app.use(express.json());
 app.use(logger); // ← se ejecuta en TODAS las peticiones
@@ -27,6 +29,6 @@ app.get('/', (req, res) => {
     });
 });
  
-app.listen(PORT, () => {
-    console.log(`Restaurante corriendo en http://localhost:${PORT}`);
+app.listen(port, () => {
+    console.log(`Restaurante corriendo en http://localhost:${port}`);
 });
