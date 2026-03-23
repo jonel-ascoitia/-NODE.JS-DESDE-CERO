@@ -1,0 +1,10 @@
+🟢 DOCUMENTO DE CIERRE — DÍA 6
+ESTUDIANTE: Esteban
+
+1. Un desarrollador hardcodea la URL de MongoDB y el JWT_SECRET directamente en el código y sube el proyecto a GitHub público. Describe al menos tres consecuencias concretas de ese error y cómo las variables de entorno las previenen.
+
+Respuesta: 1. Los hackers verían mis claves en GitHub. 2. Se podrían robar la información sensible del restaurante de la base de datos. 3. Los atacantes podrían emitir sus propios JWT para borrar platos del menú. Las variables de entorno evitan esto porque el archivo `.env` se queda en el servidor local y solo se comparte la "plantilla" `.env.example`, manteniendo el código fuente seguro e independiente del entorno.
+
+2. Explica con tus propias palabras por qué config/index.js existe. ¿Qué pasaría si cada archivo usara process.env directamente y el nombre de una variable cambiara?
+
+Respuesta: El archivo `config/index.js` es como el "cerebro" de la configuración. Si cada archivo jalara `process.env` y algo cambia, el código se volvería inmanejable. Tener un solo punto de exportación facilita el mantenimiento y asegura que `dotenv.config()` se cargue siempre primero. Sin esto, si la variable cambia de nombre en el futuro, el error sería difícil de encontrar en toda la aplicación.

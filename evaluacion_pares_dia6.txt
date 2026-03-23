@@ -1,0 +1,28 @@
+EVALUADOR: Esteban
+EVALUADO: Jonel
+ESCENARIO ELEGIDO: 1
+RESUMEN DE LA RESPUESTA: 
+Si .env llegó a GitHub, la URL de nuestra base de datos MongoDB y la clave secreta de JWT están expuestas públicamente. Un atacante podría conectarse a la base de datos o falsificar tokens para acceder al sistema. Para mitigar el daño, debemos:
+1. Cambiar inmediatamente la contraseña o URL de la base de datos.
+2. Cambiar la JWT_SECRET por una nueva.
+3. Invalidar todos los tokens actuales (al cambiar la clave secreta).
+4. Usar git filter-branch o herramientas como BFG para eliminar el archivo del historial de Git, no solo hacer un nuevo commit borrándolo.
+
+QUÉ ENTENDIÓ BIEN: Entendió perfectamente la gravedad de exponer la JWT_SECRET y la necesidad de rotar credenciales.
+QUÉ NECESITA REPASAR: La parte técnica de cómo eliminar el archivo del historial de Git completamente (no basta con un commit posterior).
+
+--------------------------------------------
+
+EVALUADOR: Jonel
+EVALUADO: Esteban
+ESCENARIO ELEGIDO: 2
+RESUMEN DE LA RESPUESTA: 
+Para que el servidor funcione, el nuevo desarrollador debe:
+1. Clonar el repositorio.
+2. Copiar el archivo .env.example y renombrarlo como .env.
+3. Rellenar los valores vacíos en el nuevo .env con sus propias credenciales locales (puerto, su URL de MongoDB local, y una clave secreta propia).
+4. Ejecutar npm install para las dependencias.
+El archivo que lo guía es el .env.example, ya que sirve de plantilla.
+
+QUÉ ENTENDIÓ BIEN: Identificó correctamente que .env.example es la guía principal.
+QUÉ NECESITA REPASAR: Recordar que después de crear el .env debe instalar las dependencias con npm install.

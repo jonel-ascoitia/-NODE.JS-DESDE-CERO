@@ -1,0 +1,10 @@
+🟢 DOCUMENTO DE CIERRE — DÍA 6
+ESTUDIANTE: Jonel
+
+1. Un desarrollador hardcodea la URL de MongoDB y el JWT_SECRET directamente en el código y sube el proyecto a GitHub público. Describe al menos tres consecuencias concretas de ese error y cómo las variables de entorno las previenen.
+
+Respuesta: 1. Acceso total a la DB: Cualquier atacante puede leer o borrar mis datos. 2. Suplantación: Al tener la JWT_SECRET pueden crear tokens de administrador. 3. Código sucio: Tendría mil nombres hardcodeados en lugar de uno centralizado. Las variables de entorno en el `.env` previenen esto porque ese archivo nunca se sube al repo y separa la configuración de los secretos del código genérico.
+
+2. Explica con tus propias palabras por qué config/index.js existe. ¿Qué pasaría si cada archivo usara process.env directamente y el nombre de una variable cambiara?
+
+Respuesta: Existe para centralizar el acceso a toda la configuración. Si no existiera y tuviera que cambiar el nombre de `PORT` a `WEBSERVER_PORT`, tendría que editar 10 archivos uno por uno. Con `config/index.js`, solo lo cambio ahí y el resto de la app ni se entera porque consumen la variable exportada. Además, me deja poner valores por defecto (fallbacks) de forma limpia.
