@@ -1,8 +1,8 @@
 🟢 DOCUMENTO DE CIERRE — DÍA 6
 ESTUDIANTE: Esteban
 
-1. ¿Qué pasa si subes el .env con secretos a GitHub?
-Respuesta: Expones la seguridad del servidor y cualquier persona puede robar o modificar los datos. El .env protege esto manteniéndolo localmente.
+1. Un desarrollador hardcodea la URL de MongoDB y el JWT_SECRET directamente en el código y sube el proyecto a GitHub público. Describe al menos tres consecuencias concretas de ese error y cómo las variables de entorno las previenen.
+Respuesta: 1. Hackeo de la DB. 2. Falsificación de tokens. 3. Exposición de credenciales. Las variables de entorno mantienen el archivo .env local, asegurando que solo el código genérico se comparta públicamente.
 
-2. ¿Por qué usamos config/index.js?
-Respuesta: Permite tener un solo punto de acceso a las variables. Facilita el mantenimiento y hace que el código sea más limpio y escalable.
+2. Explica con tus propias palabras por qué config/index.js existe. ¿Qué pasaría si cada archivo usara process.env directamente y el nombre de una variable cambiara?
+Respuesta: Sirve como único punto de acceso. Sin él, un cambio de nombre obligaría a buscar y reemplazar en todo el proyecto, haciendo el mantenimiento muy difícil.
