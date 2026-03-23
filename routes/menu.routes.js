@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const menuController = require('../controllers/menu.controller');
+const verifyToken = require('../middlewares/verifyToken');
  
 const verificarDatosPlato = (req, res, next) => {
     const { nombre, precio } = req.body;
@@ -25,12 +26,12 @@ router.get('/', menuController.obtenerMenu);
 router.get('/:id', menuController.buscarPlato);
  
 // POST /menu
-router.post('/', verificarDatosPlato, menuController.agregarPlato);
+router.post('/', verifyToken, verificarDatosPlato, menuController.agregarPlato);
  
 // DELETE /menu/:id
-router.delete('/:id', menuController.eliminarPlato);
+router.delete('/:id', verifyToken, menuController.eliminarPlato);
  
 // PUT /menu/:id
-router.put('/:id', menuController.actualizarPlato);
+router.put('/:id', verifyToken, menuController.actualizarPlato);
  
 module.exports = router;

@@ -1,0 +1,13 @@
+TARJETA DE EVALUACIÓN - DÍA 5
+ 
+EVALUADOR: Esteban
+EVALUADO: Jonel
+ESCENARIO ELEGIDO: Escenario 2 (Atacante intercepta el token)
+RESUMEN DE LA RESPUESTA:
+Explicó que aunque el payload sea legible, no se puede modificar porque la firma digital lo previene gracias a la firma del servidor.
+ 
+QUÉ ENTENDIÓ BIEN:
+Comprendió bien que el JWT no es para ocultar datos sino para garantizar su integridad.
+ 
+QUÉ NECESITA REPASAR:
+Podría investigar la diferencia de un Token vs Cookies.

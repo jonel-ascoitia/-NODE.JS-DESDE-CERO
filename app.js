@@ -1,6 +1,7 @@
 // app.js — solo configuración y conexión
 const express = require('express');
 const menuRouter = require('./routes/menu.routes');
+const authRouter = require('./routes/auth.routes');
 const logger = require('./middlewares/logger');
 const conectarDB = require('./database/connection');
  
@@ -15,6 +16,7 @@ conectarDB();
 
 // Conectar el router del menú
 app.use('/menu', menuRouter);
+app.use('/auth', authRouter);
  
 // Ruta de bienvenida
 app.get('/', (req, res) => {
