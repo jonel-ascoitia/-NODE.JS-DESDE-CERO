@@ -29,6 +29,12 @@ app.get('/', (req, res) => {
     });
 });
  
-app.listen(port, () => {
-    console.log(`Restaurante corriendo en http://localhost:${port}`);
-});
+// Exportar app para que los tests puedan usarla
+module.exports = app;
+
+if (process.env.NODE_ENV !== 'test') {
+    app.listen(port, () => {
+        console.log(`Restaurante corriendo en http://localhost:${port}`);
+    });
+}
+

@@ -1,0 +1,19 @@
+EVALUADOR: Esteban
+EVALUADO: Jonel
+ESCENARIO ELEGIDO: 1
+RESUMEN DE LA RESPUESTA: 
+Jonel explicó que al ejecutar npm test, Node.js lanza el corredor de pruebas nativo que busca archivos .test.js. Supertest carga la app de Express en memoria y le envía peticiones HTTP simuladas. No necesita que el servidor esté escuchando en un puerto físico porque interactúa directamente con el objeto app, lo que hace las pruebas más rápidas y seguras al no ocupar puertos.
+
+QUÉ ENTENDIÓ BIEN: Comprendió perfectamente que supertest no levanta un servidor de red real y cómo se integra con el objeto app.
+QUÉ NECESITA REPASAR: La sintaxis específica de los métodos de supertest como .send() y .set() para enviar tokens.
+
+--------------------------------------------
+
+EVALUADOR: Jonel
+EVALUADO: Esteban
+ESCENARIO ELEGIDO: 2
+RESUMEN DE LA RESPUESTA: 
+Esteban explicó que el código 401 (Unauthorized) significa que el servidor no sabe quién eres (falta autenticación), mientras que 403 (Forbidden) significa que sabe quién eres pero no tienes permiso para esa acción. En POST /menu sin token, devolvemos 401 porque el middleware verifyToken detecta que no hay credenciales presentadas. Si no tuviéramos este test, un cambio accidental podría dejar la ruta pública.
+
+QUÉ ENTENDIÓ BIEN: La diferencia semántica entre 401 y 403 y la importancia de prevenir regresiones de seguridad.
+QUÉ NECESITA REPASAR: Los nombres de los middlewares específicos que estamos usando en el proyecto.

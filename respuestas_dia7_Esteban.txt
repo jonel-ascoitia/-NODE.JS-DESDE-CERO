@@ -1,0 +1,11 @@
+🟢 DOCUMENTO DE CIERRE — DÍA 7
+ESTUDIANTE: Esteban
+
+1. Un compañero dice: 'los tests son una pérdida de tiempo porque yo ya probé manualmente que funciona'. ¿Qué le responderías? Da al menos dos razones concretas basadas en lo que construyeron hoy.
+Respuesta: 
+1. Los tests encuentran problemas invisibles (regresiones). Al modificar el código, no siempre probamos de nuevo todo lo anterior. Un test lo hace automáticamente en segundos cada vez que presionamos correr.
+2. Un test sirve como documentación del comportamiento esperado. Si el test pasa con un status 200, sabemos que la lógica es correcta sin tener que leer cada línea de código cada vez.
+
+2. Explica la diferencia entre assert.equal y assert.strictEqual usando el error intencional que encontraron hoy. ¿Por qué strictEqual es más seguro?
+Respuesta:
+`assert.equal` usa == (pasa con 200 == '200'), lo que oculta errores de tipo de dato. `assert.strictEqual` usa === (falla con 200 !== '200'), obligando a que el valor y el tipo coincidan. Es más seguro porque previene comportamientos inesperados si otra parte del programa espera un número pero recibe un string.

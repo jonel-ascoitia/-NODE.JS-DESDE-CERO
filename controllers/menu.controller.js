@@ -5,6 +5,8 @@ exports.obtenerMenu = async (req, res) => {
     try {
         const platos = await platoService.obtenerTodos();
         res.status(200).json(platos);
+
+
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
