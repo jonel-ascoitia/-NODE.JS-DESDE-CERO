@@ -1,11 +1,11 @@
 🟢 DOCUMENTO DE CIERRE — DÍA 7
 ESTUDIANTE: Jonel
 
-1. Un compañero dice: 'los tests son una pérdida de tiempo porque yo ya probé manualmente que funciona'. ¿Qué le responderías? Da al menos dos razones concretas basadas en lo que construyeron hoy.
+1. ¿Tests pérdida de tiempo?
 Respuesta: 
-1. Los tests detectan cambios accidentales (regresiones) que rompen código viejo al agregar código nuevo. Vimos cómo al cambiar un 200 a 201 en obtenerMenu, el test falló de inmediato avisando del error.
-2. Ahorran mucho tiempo conforme el proyecto crece. Correr npm test tarda segundos para probar todas las rutas, mientras que probar manualmente en Thunder Client para cada cambio es lento y propenso a errores humanos.
+- Detectan errores automáticamente al añadir código.
+- Ahorran tiempo manual frente a probar ruta por ruta en Thunder Client.
 
-2. Explica la diferencia entre assert.equal y assert.strictEqual usando el error intencional que encontraron hoy. ¿Por qué strictEqual es más seguro?
+2. assert.equal vs assert.strictEqual:
 Respuesta: 
-`assert.equal` utiliza == (comparación de valor con coerción de tipos), por lo que treat 200 y '200' como iguales. `assert.strictEqual` utiliza === (comparación de valor Y tipo), detectando que 200 no es '200'. Es más seguro porque asegura que las respuestas del servidor tengan exactamente el tipo de dato esperado (número para status codes), lo que previene bugs sutiles en la lógica del backend.
+`equal` (==) ignora tipos (200 == '200' es true). `strictEqual` (===) valida valor y tipo, evitando fallos silenciosos en el backend.
