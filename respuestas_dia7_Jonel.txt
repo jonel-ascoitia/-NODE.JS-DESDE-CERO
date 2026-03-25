@@ -1,11 +1,8 @@
 🟢 DOCUMENTO DE CIERRE — DÍA 7
 ESTUDIANTE: Jonel
 
-1. ¿Tests pérdida de tiempo?
-Respuesta: 
-- Detectan errores automáticamente al añadir código.
-- Ahorran tiempo manual frente a probar ruta por ruta en Thunder Client.
+Respuesta 1: 
+Detectan errores automáticamente al añadir código y ahorran tiempo manual frente a probar ruta por ruta en Thunder Client.
 
-2. assert.equal vs assert.strictEqual:
-Respuesta: 
+Respuesta 2: 
 `equal` (==) ignora tipos (200 == '200' es true). `strictEqual` (===) valida valor y tipo, evitando fallos silenciosos en el backend.

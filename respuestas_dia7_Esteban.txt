@@ -1,11 +1,8 @@
 🟢 DOCUMENTO DE CIERRE — DÍA 7
 ESTUDIANTE: Esteban
 
-1. ¿Tests pérdida de tiempo?
-Respuesta: 
-- Previenen que código viejo se rompa al refactorizar.
-- Sirven como documentación rápida del comportamiento esperado.
+Respuesta 1: 
+Previenen que código viejo se rompa al refactorizar y sirven como documentación rápida del comportamiento esperado.
 
-2. assert.equal vs assert.strictEqual:
-Respuesta: 
+Respuesta 2: 
 `equal` compara solo valor. `strictEqual` compara valor y tipo (p. ej. número vs string), siendo mucho más seguro y robusto.
