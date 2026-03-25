@@ -23,14 +23,8 @@ const verificarDatosPlato = (req, res, next) => {
 router.get('/', menuController.obtenerMenu);
  
 // GET /menu/buscar?nombre=...
-router.get('/buscar', (req, res) => {
-    const { nombre } = req.query;
-    if (!nombre) {
-        return res.status(400).json({ error: 'Query param nombre es obligatorio' });
-    }
-    // Por ahora solo para pasar el test, podríamos llamar al servicio
-    res.status(200).json([]);
-});
+router.get('/buscar', menuController.buscarPorNombre);
+
 
 // GET /menu/:id
 router.get('/:id', menuController.buscarPlato);

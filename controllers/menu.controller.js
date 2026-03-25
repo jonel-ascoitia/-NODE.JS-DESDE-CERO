@@ -1,6 +1,6 @@
 // controllers/menu.controller.js
 const platoService = require('../services/plato.service');
- 
+
 exports.obtenerMenu = async (req, res) => {
     try {
         const platos = await platoService.obtenerTodos();
@@ -11,7 +11,7 @@ exports.obtenerMenu = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
- 
+
 exports.buscarPlato = async (req, res) => {
     try {
         const { id } = req.params;
@@ -25,6 +25,20 @@ exports.buscarPlato = async (req, res) => {
     }
 };
  
+exports.buscarPorNombre = async (req, res) => {
+    try {
+        const { nombre } = req.query;
+        if (!nombre) {
+            return res.status(400).json({ error: 'Falta parámetro nombre' });
+        }
+        const platos = await platoService.buscarPorNombre(nombre);
+        res.status(200).json(platos);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+
+
 exports.agregarPlato = async (req, res) => {
     try {
         const { nombre, precio } = req.body;
@@ -37,7 +51,7 @@ exports.agregarPlato = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
- 
+
 exports.actualizarPlato = async (req, res) => {
     try {
         const { id } = req.params;
@@ -50,7 +64,7 @@ exports.actualizarPlato = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
- 
+
 exports.eliminarPlato = async (req, res) => {
     try {
         const { id } = req.params;
