@@ -6,20 +6,20 @@ const logger = require('./middlewares/logger');
 const conectarDB = require('./database/connection');
 const { port } = require('./config');
 
- 
+
 const app = express();
 
- 
+
 app.use(express.json());
 app.use(logger); // ← se ejecuta en TODAS las peticiones
- 
+
 // Conectar a MongoDB antes de levantar el servidor
 conectarDB();
 
 // Conectar el router del menú
 app.use('/menu', menuRouter);
 app.use('/auth', authRouter);
- 
+
 // Ruta de bienvenida
 app.get('/', (req, res) => {
     res.status(200).json({
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
         rutas: ['/menu']
     });
 });
- 
+
 // Exportar app para que los tests puedan usarla
 module.exports = app;
 
