@@ -7,9 +7,5 @@ link: https://drive.google.com/file/d/1MQ14ftA3yy0D5SYWbbIF8PKivw2KiutQ/view?usp
 Enlace de Loom — Día 7
 link: https://drive.google.com/file/d/1MwZGImF8xP1qGIH7cFm2RTD2xOYVH7jo/view?usp=sharing
 
-Enlace de Loom — Día 8 (PENDEIENTE)
-link: [PEGA AQUÍ TU LINK DE LOOM PARA EL DÍA 8]
-🎬 Estructura del video:
-- Minuto 1: Diagnóstico de los 3 bugs.
-- Minuto 2-4: Demo completa (Registro, Login, POST plato con token, GET menú, Filtro categoría, npm test).
-- Minuto 5: Estructura en VS Code y despedida.
+Enlace de Loom — Día 8 
+link: https://drive.google.com/file/d/1sspatqPqLPh0txHbw3GTPFNPVfab0cjg/view?usp=sharing
