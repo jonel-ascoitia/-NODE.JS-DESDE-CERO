@@ -1,0 +1,19 @@
+DIAGNÓSTICO DE BUGS - DÍA 8
+
+BUG 1 (Seguridad) - routes/menu.routes.js
+- Ubicación: Ruta POST /
+- Diagnóstico: Falta el middleware verifyToken en la ruta POST /menu.
+- Consecuencia: Cualquier usuario sin autenticar puede agregar platos al menú, comprometiendo la integridad de la base de datos.
+- Corrección: Añadir verifyToken antes del controlador: router.post('/', verifyToken, ...)
+
+BUG 2 (Configuración) - database/connection.js
+- Ubicación: Variable uri dentro de conectarDB.
+- Diagnóstico: Se lee process.env.MONGO_URI directamente en lugar de usar mongoUri importado desde config/index.js.
+- Consecuencia: Si config/index.js es quien maneja dotenv.config(), usar process.env directamente en otros archivos prematuramente puede causar errores de conexión si las variables aún no se han cargado.
+- Corrección: Usar la constante mongoUri que ya viene validada desde el archivo de configuración.
+
+BUG 3 (Lógica) - services/plato.service.js
+- Ubicación: Método actualizar(id, data)
+- Diagnóstico: El método findByIdAndUpdate no incluye el objeto de opción { new: true }.
+- Consecuencia: Mongoose devuelve el documento tal como estaba ANTES de la actualización. El cliente recibe datos desactualizados en la respuesta aunque el cambio se haya guardado.
+- Corrección: Añadir { new: true } como tercer parámetro.

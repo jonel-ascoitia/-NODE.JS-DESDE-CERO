@@ -29,6 +29,9 @@ router.get('/buscar', menuController.buscarPorNombre);
 // GET /menu/:id
 router.get('/:id', menuController.buscarPlato);
 
+// GET /menu/categoria/:categoria
+router.get('/categoria/:categoria', menuController.filtrarPorCategoria);
+
  
 // POST /menu
 router.post('/', verifyToken, verificarDatosPlato, menuController.agregarPlato);

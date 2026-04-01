@@ -1,0 +1,19 @@
+EVALUADOR: Esteban
+EVALUADO: Jonel
+ESCENARIO ELEGIDO: 2
+RESUMEN DE LA RESPUESTA: 
+Jonel trazó el flujo completo de la nueva funcionalidad. Explicó que la petición GET /menu/categoria/Segundos entra por el router, donde se captura el parámetro :categoria. Luego, el controlador filtrarPorCategoria recibe este valor y lo pasa al platoService.buscarPorCategoria. El servicio realiza un Plato.find en MongoDB y el resultado (un array de platos) viaja de vuelta por el controlador hasta ser enviado al cliente con status 200.
+
+QUÉ ENTENDIÓ BIEN: La arquitectura de capas y cómo el parámetro de la URL llega hasta la consulta de la base de datos.
+QUÉ NECESITA REPASAR: Recordar que en el controlador usamos req.params para capturar el valor de la ruta definida con dos puntos.
+
+--------------------------------------------
+
+EVALUADOR: Jonel
+EVALUADO: Esteban
+ESCENARIO ELEGIDO: 1
+RESUMEN DE LA RESPUESTA: 
+Esteban identificó correctamente los 3 bugs del diagnóstico. Explicó que el primer bug era de seguridad en la ruta POST (faltaba verifyToken), el segundo era de configuración en connection.js (uso directo de process.env) y el tercero era de lógica en el service (falta de { new: true } en findByIdAndUpdate). Entiende que estos errores, aunque pequeños, comprometen seriamente la integridad y experiencia de usuario del backend.
+
+QUÉ ENTENDIÓ BIEN: Las consecuencias reales de cada bug, especialmente el impacto de no devolver el documento actualizado al cliente.
+QUÉ NECESITA REPASAR: La jerarquía de carga de variables de entorno para evitar usar process.env de forma directa fuera de la configuración centralizada.

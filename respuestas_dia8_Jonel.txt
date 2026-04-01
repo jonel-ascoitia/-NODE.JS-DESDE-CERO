@@ -1,0 +1,10 @@
+🟢 DOCUMENTO DE CIERRE — DÍA 8
+ESTUDIANTE: Jonel
+
+1. Hace 8 días el restaurante no existía. Hoy tiene base de datos, autenticación, tests y configuración segura. Describe en tus propias palabras qué aprendiste que no sabías al empezar. Sé específico.
+Respuesta: 
+Aprendí a estructurar una API completa por capas. No sabía cómo conectar MongoDB con Mongoose ni cómo proteger rutas con JWT, ahora entiendo todo el flujo de seguridad.
+
+2. Si mañana tuvieras que agregar una nueva entidad al restaurante — por ejemplo, una tabla de pedidos — ¿qué archivos crearías, en qué orden y por qué ese orden? Describe el proceso sin escribir código.
+Respuesta: 
+Seguiría el orden: Modelo -> Servicio -> Controlador -> Rutas -> app.js. Es el mejor flujo porque construyes la base (datos) antes que la cara visible (rutas).

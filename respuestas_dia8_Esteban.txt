@@ -1,0 +1,10 @@
+🟢 DOCUMENTO DE CIERRE — DÍA 8
+ESTUDIANTE: Esteban
+
+1. Hace 8 días el restaurante no existía. Hoy tiene base de datos, autenticación, tests y configuración segura. Describe en tus propias palabras qué aprendiste que no sabías al empezar. Sé específico.
+Respuesta: 
+Aprendí a usar variables de entorno correctamente y a diagnosticar fallos en la lógica con tests automáticos, algo que antes probaba solo manualmente.
+
+2. Si mañana tuvieras que agregar una nueva entidad al restaurante — por ejemplo, una tabla de pedidos — ¿qué archivos crearías, en qué orden y por qué ese orden? Describe el proceso sin escribir código.
+Respuesta: 
+Crearía: Modelo (DB), Servicio (Lógica), Controlador (HTTP), Rutas y finalmente lo registraría en app.js. Así, cada nivel tiene sus funciones listas al momento de ser llamadas.

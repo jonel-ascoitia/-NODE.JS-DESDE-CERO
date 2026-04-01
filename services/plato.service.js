@@ -15,6 +15,10 @@ class PlatoService {
         // Usamos regex para búsqueda parcial e insensible a mayúsculas
         return await Plato.find({ nombre: new RegExp(nombre, 'i') });
     }
+    async buscarPorCategoria(categoria) {
+        return await Plato.find({ categoria: new RegExp(categoria, 'i') });
+    }
+
     async actualizar(id, data) {
 
         return await Plato.findByIdAndUpdate(id, data, { new: true });
