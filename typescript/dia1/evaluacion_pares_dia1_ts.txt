@@ -2,14 +2,14 @@ Tarjeta de evaluación
 EVALUADOR: Jonel
 EVALUADO: Esteban
 ESCENARIO ELEGIDO: 1
-RESUMEN DE LA RESPUESTA: Esteban explicó que la interface de TS protege los datos a nivel código durante el desarrollo, antes de llegar a Mongoose o la base de datos, mientras que Mongoose protege la información en la propia base de datos.
-QUÉ ENTENDIÓ BIEN: Entendió perfectamente la diferencia entre chequeos en tiempo de desarrollo y tiempo de ejecución.
-QUÉ NECESITA REPASAR: Recordar que la interface no reemplaza el schema, sino que lo complementa.
+RESUMEN DE LA RESPUESTA: TS protege el código en desarrollo; Mongoose valida después, al insertar en la BD.
+QUÉ ENTENDIÓ BIEN: La diferencia entre revisar el código vs ejecución.
+QUÉ NECESITA REPASAR: Que TS y Mongoose se complementan mutuamente.
 
 Tarjeta de evaluación
 EVALUADOR: Esteban
 EVALUADO: Jonel
 ESCENARIO ELEGIDO: 2
-RESUMEN DE LA RESPUESTA: Jonel indicó que CreatePlatoDto representa los datos que el usuario envía para crear el plato (no incluye _id). El servidor genera _id y lo devuelve en PlatoResponseDto.
-QUÉ ENTENDIÓ BIEN: Entendió muy bien la separación de responsabilidades y por qué existen diferentes "formas" del mismo objeto.
-QUÉ NECESITA REPASAR: En el código podría especificar mejor si algún campo es opcional antes de guardarse en Mongoose.
+RESUMEN DE LA RESPUESTA: CreatePlatoDto representa la entrada limpia del cliente (sin _id). El servidor genera _id y lo devuelve en PlatoResponseDto.
+QUÉ ENTENDIÓ BIEN: El flujo correcto de datos y la función del DTO.
+QUÉ NECESITA REPASAR: Ninguno, todo muy claro.
